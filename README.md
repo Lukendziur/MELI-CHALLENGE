@@ -117,6 +117,8 @@ To use the test part, follow these instructions:
 
 3. Execute "Test end to end".
 
+4. If you want the workflow github to check if you can merge, you will also need a playwright.yml script config inside of a .github folder in your root directory. The path must be: /.github/workflows/playwright. This option is available when you install the dependency.
+
 # CONSIDERATIONS:
 
 1. This challenge could have been solved in a simpler way, with less file structure, less componetization, less styling and even setting up a simple server in Node. My intention is to show how I would work on a medium scale project using one of the most used technologies for server side rendering nowadays: Next.js.
