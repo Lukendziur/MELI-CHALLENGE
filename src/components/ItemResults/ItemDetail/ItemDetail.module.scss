@@ -1,0 +1,60 @@
+/* MOBILE */
+.mainInfo {
+  @include flex(column);
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+  padding: 16px;
+  color: var(--text);
+
+  .articleContainer {
+    @include flex(column, center, center, 16px);
+
+    .productImg {
+      border-radius: 4px;
+      @include size(180px, 180px);
+    }
+
+    .infoContainer {
+      @include flex(column, flex-start, flex-start, 32px);
+      align-self: flex-start;
+      max-width: 90%;
+
+      .priceIcon {
+        @include flex(row, center, center, 8px);
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+  .location {
+    color: var(--gray-text);
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+/* TABLET - DESKTOP */
+@media only screen and (min-width: 780px) {
+  .mainInfo {
+    @include flex(row, flex-start, space-between, 15px);
+    padding-right: 90px;
+
+    .articleContainer {
+      @include flex(row, center, flex-start, 16px);
+
+      .infoContainer {
+        margin-top: 32px;
+        max-width: 60%;
+      }
+    }
+
+    .location {
+      margin-top: 44px;
+    }
+  }
+}

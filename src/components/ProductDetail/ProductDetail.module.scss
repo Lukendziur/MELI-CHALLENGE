@@ -1,0 +1,126 @@
+/* MOBILE */
+
+.backContainer {
+  @include flex(row, unset, unset, 4px);
+
+  .backButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 400;
+  }
+}
+
+.sectionContainer {
+  @include flex(column, unset, unset, 16px);
+  margin: auto;
+  border-radius: 4px;
+  padding: 32px;
+  background-color: white;
+  color: var(--text);
+  width: 100%;
+
+  .imgContainer {
+    img {
+      width: 100%;
+    }
+  }
+
+  .infoBox {
+    @include flex(column, unset, unset, 32px);
+
+    .priceTitle {
+      @include flex(column, unset, unset, 16px);
+      .soldCondition {
+        font-size: 14px;
+        color: var(--text);
+        .freeShipping {
+          margin-top: 10px;
+          @include flex(row, unset, unset, 5px);
+        }
+      }
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+
+    .buyButton {
+      background-color: var(--button);
+      padding: 10px;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    .buyButton:hover {
+      background-color: var(--hover-button);
+    }
+  }
+
+  .description {
+    @include flex(column, unset, unset, 32px);
+    grid-area: description;
+    h3 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+    p {
+      color: var(--secondary-text);
+    }
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 850px) {
+  .sectionContainer {
+    display: grid;
+    gap: 16px;
+    grid-template-areas:
+      'imgContainer infoBox'
+      'description infoBox';
+
+    .imgContainer {
+      grid-area: imgContainer;
+      width: 100%;
+      img {
+        max-width: 680px;
+        min-width: 450px;
+      }
+    }
+
+    .infoBox {
+      max-width: 96%;
+      width: 100%;
+      justify-self: end;
+      h2 {
+        // ? we are living in Argentina, we need to handle in some way the price size
+        // ? The price could scale to 46px (best design)
+        font-size: min(max(16px, 4vw), 46px);
+      }
+    }
+
+    .description {
+      grid-area: description;
+      max-width: 680px;
+    }
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1100px) {
+  .sectionContainer {
+    .imgContainer {
+      img {
+        width: 680px;
+      }
+    }
+  }
+}

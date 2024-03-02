@@ -1,0 +1,19 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--barlow), Montserrat, sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--gray-bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,15 @@
+/* MOBILE */
+.itemsResultContainer {
+  @include flex(column, unset, unset, 8px);
+  border-radius: 4px;
+  width: 100%;
+  margin: auto;
+}
+
+/* TABLET - DESKTOP */
+@media only screen and (min-width: 780px) {
+  .itemsResultContainer {
+    @include flex(column, unset, unset, 0);
+    background-color: white;
+  }
+}

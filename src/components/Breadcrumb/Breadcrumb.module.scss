@@ -1,0 +1,18 @@
+.breadcrumbContainer {
+  @include flex(row, center, unset, 5px);
+  flex-wrap: wrap;
+  .breadcrumb {
+    font-size: 14px;
+    color: var(--secondary-text);
+    font-weight: 400;
+    .arrowContainer {
+      margin-left: 5px;
+      .imgArrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .lastBread {
+    font-weight: 600;
+  }
+}

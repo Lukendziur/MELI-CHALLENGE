@@ -1,0 +1,24 @@
+.errorContainer {
+  @include flex(column, center, unset, 20px);
+  background-color: white;
+  padding: 30px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+  max-width: 700px;
+  align-self: center;
+
+  .redirectLink {
+    background-color: var(--button);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 250px;
+    width: 100%;
+    transition: all 1s;
+  }
+  .redirectLink:hover {
+    background-color: var(--hover-button);
+  }
+}

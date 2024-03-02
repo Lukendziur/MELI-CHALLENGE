@@ -1,0 +1,11 @@
+.currencyContainer {
+  @include flex(row, flex-start, unset, 1px);
+
+  .currency {
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .decimals {
+    font-size: 14px;
+  }
+}

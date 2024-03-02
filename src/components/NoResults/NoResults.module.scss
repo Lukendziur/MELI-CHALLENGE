@@ -1,0 +1,6 @@
+.noResultsContainer {
+  @include flex(column, center, center, 20px);
+  align-self: center;
+  text-align: center;
+  color: var(--text);
+}

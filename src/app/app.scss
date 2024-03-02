@@ -1,0 +1,11 @@
+@import '../styles/partials/globals';
+@import '../styles/partials/theme';
+
+main {
+  @include flex(column, flex-start, flex-start, 16px);
+  background-color: var(--gray-bg);
+  height: calc(100% - 58px); // 58px from header
+  padding: 16px;
+  max-width: 1100px; // defined the same value in header
+  margin: 0 auto;
+}

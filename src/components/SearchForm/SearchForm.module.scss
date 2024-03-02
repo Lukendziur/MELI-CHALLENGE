@@ -1,0 +1,26 @@
+/* MOBILE */
+.formContainer {
+  @include flex(row);
+  width: 100%;
+  .inputClass {
+    @include size(100%, 40px);
+    font-size: 18px;
+    border: none;
+    padding: 12px;
+    border-radius: 4px 0 0 4px;
+    outline: 0;
+    color: var(--text);
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px white inset;
+    }
+  }
+
+  .submitButton {
+    background-color: var(--gray-bg);
+    cursor: pointer;
+    width: 48px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+  }
+}

@@ -1,0 +1,12 @@
+/* MOBILE FIRST */
+.headerContainer {
+  @include flex(row, center, center, 25px);
+  background-color: var(--primary);
+  height: 58px;
+  .header {
+    padding: 16px;
+    @include flex(row, center, center, 25px);
+    width: 100%;
+    max-width: 1100px; // ? the same value was defined in main to keep consistency
+  }
+}
